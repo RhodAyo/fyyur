@@ -1,6 +1,6 @@
 from datetime import datetime
 from flask_wtf import Form
-from wtforms import StringField, SelectField, SelectMultipleField, DateTimeField, BooleanField, IntegerField
+from wtforms import StringField, SelectField, SelectMultipleField, DateTimeField, BooleanField
 from wtforms.validators import DataRequired, AnyOf, URL, Length, Regexp
 
 class ShowForm(Form):
@@ -193,7 +193,7 @@ class ArtistForm(Form):
     )
     phone = IntegerField(
         # TODO implement validation logic for state
-        'phone',validators=[DataRequired('Required'),Length(min=11, max=11)]
+        'phone',validators=[DataRequired('Required'),Length(min=10, max=14),Regexp(regex='/^[0-9]{0,11}$/')]
     )
     image_link = StringField(
         'image_link'
