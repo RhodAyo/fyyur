@@ -1,0 +1,4 @@
+.fyenv/node_modules
+__pycache__/
+. venv
+venv/env/. vscode 
