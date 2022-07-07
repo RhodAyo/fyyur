@@ -191,7 +191,7 @@ class ArtistForm(Form):
             ('WY', 'WY'),
         ]
     )
-    phone = IntegerField(
+    phone = StringField(
         # TODO implement validation logic for state
         'phone',validators=[DataRequired('Required'),Length(min=10, max=14),Regexp(regex='/^[0-9]{0,11}$/')]
     )

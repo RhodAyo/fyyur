@@ -1,4 +1,4 @@
 .fyenv/
 __pycache__/
-node_modules/
-fyenv/
+node_modules
+fyenv
